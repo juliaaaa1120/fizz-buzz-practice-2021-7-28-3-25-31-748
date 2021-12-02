@@ -7,106 +7,114 @@ public class FizzBuzzTest {
     private Integer order;
 
     @Test
-    public void should_output_1_when_count_off_and_order_is_1() throws Exception {
-        order = 1;
+    public void should_return_order_when_count_off_given_order_number_with_normal_case() throws Exception {
+        //given
+        order = 19;
+
+        //when
         FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = order.toString();
         String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("1");
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
     }
 
     @Test
-    public void should_output_2_when_count_off_and_order_is_2() throws Exception {
-        order = 2;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("2");
-    }
-
-    @Test
-    public void should_output_Fizz_when_count_off_and_order_is_3() throws Exception {
-        order = 3;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Fizz");
-    }
-
-    @Test
-    public void should_output_4_when_count_off_and_order_is_4() throws Exception {
-        order = 4;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("4");
-    }
-
-    @Test
-    public void should_output_Buzz_when_count_off_and_order_is_5() throws Exception {
-        order = 5;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Buzz");
-    }
-
-    @Test
-    public void should_output_Fizz_when_count_off_and_order_is_6() throws Exception {
-        order = 6;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Fizz");
-    }
-
-    @Test
-    public void should_output_Whizz_when_count_off_and_order_is_7() throws Exception {
-        order = 7;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Whizz");
-    }
-
-    @Test
-    public void should_output_8_when_count_off_and_order_is_8() throws Exception {
-        order = 8;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("8");
-    }
-
-    @Test
-    public void should_output_Fizz_when_count_off_and_order_is_9() throws Exception {
-        order = 9;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Fizz");
-    }
-
-    @Test
-    public void should_output_Buzz_when_count_off_and_order_is_10() throws Exception {
-        order = 10;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Buzz");
-    }
-
-    @Test
-    public void should_output_11_when_count_off_and_order_is_11() throws Exception {
-        order = 11;
-        FizzBuzz fizzBuzz = new FizzBuzz();
-        String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("11");
-    }
-
-    @Test
-    public void should_output_Fizz_when_count_off_and_order_is_12() throws Exception {
+    public void should_return_Fizz_when_count_off_given_order_number_with_multiples_3() throws Exception {
+        //given
         order = 12;
+
+        //when
         FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "Fizz";
         String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("Fizz");
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
     }
 
     @Test
-    public void should_output_13_when_count_off_and_order_is_13() throws Exception {
-        order = 13;
+    public void should_return_Buzz_when_count_off_given_order_number_with_multiples_5() throws Exception {
+        //given
+        order = 25;
+
+        //when
         FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "Buzz";
         String actualResult = fizzBuzz.countOff(order);
-        assertThat(actualResult).isEqualTo("13");
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void should_return_Whizz_when_count_off_given_order_number_with_multiples_7() throws Exception {
+        //given
+        order = 49;
+
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "Whizz";
+        String actualResult = fizzBuzz.countOff(order);
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void should_return_FizzBuzz_when_count_off_given_order_number_with_multiples_3_5() throws Exception {
+        //given
+        order = 15;
+
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "FizzBuzz";
+        String actualResult = fizzBuzz.countOff(order);
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void should_return_FizzWhizz_when_count_off_given_order_number_with_multiples_3_7() throws Exception {
+        //given
+        order = 21;
+
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "FizzWhizz";
+        String actualResult = fizzBuzz.countOff(order);
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void should_return_BuzzWhizz_when_count_off_given_order_number_with_multiples_5_7() throws Exception {
+        //given
+        order = 35;
+
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "BuzzWhizz";
+        String actualResult = fizzBuzz.countOff(order);
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
+    }
+
+    @Test
+    public void should_return_FizzBuzzWhizz_when_count_off_given_order_number_with_multiples_3_5_7() throws Exception {
+        //given
+        order = 105;
+
+        //when
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expectedResult = "FizzBuzzWhizz";
+        String actualResult = fizzBuzz.countOff(order);
+
+        //then
+        assertThat(actualResult).isEqualTo(expectedResult);
     }
 }
