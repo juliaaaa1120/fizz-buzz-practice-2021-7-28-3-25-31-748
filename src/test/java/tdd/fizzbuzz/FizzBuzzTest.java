@@ -21,4 +21,12 @@ public class FizzBuzzTest {
         String actualResult = fizzBuzz.countOff(order);
         assertThat(actualResult).isEqualTo("2");
     }
+
+    @Test
+    public void should_output_Fizz_when_count_off_and_order_is_3() throws Exception {
+        order = 3;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String actualResult = fizzBuzz.countOff(order);
+        assertThat(actualResult).isEqualTo("Fizz");
+    }
 }
